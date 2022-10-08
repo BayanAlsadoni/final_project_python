@@ -15,6 +15,11 @@ def course_class():
     return class_course
 
 
+def get_all_students(students):
+    for st in students:
+        print(st.student_details())
+
+
 def find_std(student_id,students):
     for sdt in students:
         if sdt.student_id == student_id:
@@ -52,6 +57,7 @@ write the select here 💁🏻‍ =>"""))
         print(std.student_details())
 
     if choice == 2:
+        get_all_students(students_list)
         std_id = int(input('enter user id'))
         student = find_std(std_id,students_list)
         if student == -1:
@@ -61,6 +67,8 @@ write the select here 💁🏻‍ =>"""))
             print('student deleted successfully')
 
     if choice == 3:
+        get_all_students(students_list)
+
         std_id = int(input('enter student id'))
 
         std = find_std(std_id,students_list)
