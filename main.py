@@ -91,7 +91,7 @@ write the select here 💁🏻‍ =>"""))
         std_num = int(input('enter student number'))
         std = find_std(std_num, students_list)
         if std == -1:
-            print(std, 'student not exist')
+            print('student not exist')
         else:
             course_name = input('enter course name:')
             cr = find_course(course_name,courses_list)
